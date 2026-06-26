@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family:'Inter',system-ui,sans-serif; margin:0; padding:0; background:#f4f6f8; }
+@layer components {
+  .btn-primary { @apply bg-primary text-white font-semibold px-4 py-2.5 rounded-lg hover:bg-primary-dark transition-colors text-sm disabled:opacity-60 disabled:cursor-not-allowed; }
+  .btn-outline { @apply border border-gray-300 text-gray-700 font-medium px-4 py-2.5 rounded-lg hover:bg-gray-50 transition-colors text-sm; }
+  .btn-danger { @apply bg-red-500 text-white font-semibold px-4 py-2.5 rounded-lg hover:bg-red-600 transition-colors text-sm; }
+  .input-field { @apply w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-navy outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all placeholder:text-gray-400; }
+  .select-field { @apply w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-navy outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all bg-white; }
+  .card { @apply bg-white rounded-xl border border-gray-100 shadow-card; }
+  .sidebar-link { @apply flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-gray-500 hover:bg-primary-light hover:text-primary transition-all cursor-pointer; }
+  .sidebar-link-active { @apply bg-primary-light text-primary font-semibold; }
+  .badge-active { @apply text-[11px] font-semibold px-2 py-0.5 rounded-full bg-green-100 text-green-700; }
+  .badge-inactive { @apply text-[11px] font-semibold px-2 py-0.5 rounded-full bg-orange-100 text-orange-700; }
+  .badge-online { @apply text-[11px] font-semibold px-2 py-0.5 rounded-full bg-primary-light text-primary; }
+  .badge-hallbased { @apply text-[11px] font-semibold px-2 py-0.5 rounded-full bg-purple-100 text-purple-700; }
+  .step-active { @apply w-6 h-6 rounded-full bg-primary text-white text-[10px] font-bold flex items-center justify-center; }
+  .step-done { @apply w-6 h-6 rounded-full bg-primary text-white text-[10px] font-bold flex items-center justify-center; }
+  .step-inactive { @apply w-6 h-6 rounded-full border-2 border-gray-300 text-gray-400 text-[10px] font-bold flex items-center justify-center; }
+}
